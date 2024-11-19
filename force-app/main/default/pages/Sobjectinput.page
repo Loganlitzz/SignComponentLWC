@@ -1,0 +1,6 @@
+<apex:page standardController="Activity__c">
+    <div class="row">
+        <h2 class="header">Input Sobject: </h2>
+        <input type="sobject" name="input1" label="Enter a date" />
+    </div>
+</apex:page>

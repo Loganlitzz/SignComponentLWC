@@ -1,0 +1,27 @@
+<template>
+    <div style="background-color:white">
+        <template if:true={showspinner}>
+            <lightning-spinner alternative-text="Loading" size="medium" ></lightning-spinner>
+        </template>
+        <!-- Canvas -->
+        <div class="slds-align_absolute-center">
+            <canvas id="canvas" style="border:2px solid #ddd;background: white;margin-right:20px;" height="100" ></canvas>
+
+        </div>
+        <!-- Clear and Save Buttons -->
+        <div class="slds-align_absolute-center slds-var-p-around_small slds-is-relative">
+            <lightning-button label="Clear" title="action:delete" class="slds-var-m-left_x-small" 
+                              variant="destructive" onclick={signatureClear} style="padding-right: 15px;"></lightning-button>
+            
+            <lightning-button-stateful variant={variantState} label="Save" class="slds-var-m-left_x-small" 
+            label-when-off = "Save"
+            label-when-on={isClear}
+            icon-name-when-off="utility:save"
+            icon-name-when-on={isSave}
+            selected={isSelected}
+            onclick={saveSignature}
+            disabled={isDisabled}
+            ></lightning-button-stateful>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,15 @@
+<apex:page standardController="Activity__c">
+    <style>
+    .row{
+        margin: 30px auto;
+        margin-left: 25%;
+}
+    </style>
+    <div class="row">
+        <h2 class="header">Input Sobject: </h2>
+        <input type="sobject" name="inputs1" label="Enter a date" />
+        <input type="Button" name="Save" label="Save" OnClick="ClickController()"/>
+            <apex:pageMessage severity="confirm" summary="Record save successfully." strength="1"/>  
+
+    </div>
+</apex:page>

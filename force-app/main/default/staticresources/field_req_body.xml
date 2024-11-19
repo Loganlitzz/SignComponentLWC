@@ -1,0 +1,10 @@
+{
+	"FullName": "Account.Summary_Result__c",
+    "Metadata": {
+        "type": "Text",
+        "label": "SUM",
+        "length":42
+    }
+    
+}
+
